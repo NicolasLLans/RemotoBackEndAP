@@ -18,6 +18,10 @@ public class Persona {
     private String descripcion;
     private String fotoPerfil;
     private String fotoBanner;
+    private String instagram;
+    private String youtube;
+    private String linkedin;
+    private String github;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
     public List<Educacion> educacionList;
@@ -34,7 +38,7 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(Long id, String nombre, String apellido, String titulo,String localidad, String descripcion, String fotoPerfil, String fotoBanner) {
+    public Persona(Long id, String nombre, String apellido, String titulo,String localidad, String descripcion, String fotoPerfil, String fotoBanner, String instagram, String youtube, String linkedin, String github) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -43,9 +47,46 @@ public class Persona {
         this.descripcion = descripcion;
         this.fotoPerfil = fotoPerfil;
         this.fotoBanner=fotoBanner;
+        this.instagram = instagram;
+        this.youtube = youtube;
+        this.linkedin = linkedin;
+        this.github = github;
+    }
+
+
+    
+    public String getInstagram() {
+        return instagram;
+    }
+
+    public void setInstagram(String instagram) {
+        this.instagram = instagram;
+    }
+
+    public String getYoutube() {
+        return youtube;
+    }
+
+    public void setYoutube(String youtube) {
+        this.youtube = youtube;
+    }
+
+    public String getLinkedin() {
+        return linkedin;
+    }
+
+    public void setLinkedin(String linkedin) {
+        this.linkedin = linkedin;
+    }
+
+    public String getGithub() {
+        return github;
     }
 
     /*****************************************/
+    public void setGithub(String github) {
+        this.github = github;
+    }
 
     public Long getId() {
         return id;
